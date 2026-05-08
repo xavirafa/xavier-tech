@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updated_at": "2026-05-07",
   "categories": [
     { "id": "ai", "label": "IA y Asistentes", "icon": "spark" },
@@ -7,6 +7,7 @@
     { "id": "web", "label": "Web y portales", "icon": "globe" },
     { "id": "mobile", "label": "Apps moviles", "icon": "phone" },
     { "id": "data", "label": "Data y reportes", "icon": "chart" },
+    { "id": "automation", "label": "Automatizaciones y trading", "icon": "spark2" },
     { "id": "productivity", "label": "Productividad", "icon": "spark2" }
   ],
   "headline": "Si lo puedes imaginar, se puede construir.",
@@ -196,7 +197,7 @@
     },
     {
       "id": "automatizaciones",
-      "category": "data",
+      "category": "automation",
       "featured": false,
       "title": "Automatizaciones de bandeja de correo",
       "tagline": "Tus correos importantes — clasificados, archivados, registrados, todos los dias.",
@@ -205,6 +206,18 @@
       "impact": "Cero copy-paste manual. Datos siempre al dia. Tiempo recuperado.",
       "stack": ["n8n", "Gmail API", "Google Sheets API"],
       "mockup": "automation-flow"
+    },
+    {
+      "id": "trading-bots",
+      "category": "automation",
+      "featured": true,
+      "title": "Tu estrategia manual, convertida en robot que opera 24/5",
+      "tagline": "Si tu estrategia funciona en papel, la puedo programar para que la ejecute sola.",
+      "problem": "Operas con disciplina pero te pierdes setups por estar en reuniones, durmiendo o por dudar en el momento. La emocion arruina backtests que en papel daban verdes.",
+      "solution": "Convierto estrategias manuales (forex, indices, oro) en Expert Advisors para MetaTrader 4 y 5. Detecciones de sesion (Asia/Londres/NY), liquidez ICT/CRT, breakouts de rango (ORB), medias moviles, gestion de riesgo en USD por trade, cierres parciales, breakeven dinamico, panel visual con cronometros vivos.",
+      "impact": "Cero tilt, cero FOMO, cero setups perdidos por horario. La estrategia ejecuta exactamente como la diseñaste — siempre.",
+      "stack": ["MQL5", "MetaTrader 4 / 5", "Backtesting", "Auto-deteccion broker"],
+      "mockup": "trading-chart"
     }
   ]
 }
