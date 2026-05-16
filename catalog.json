@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updated_at": "2026-05-07",
+  "version": 3,
+  "updated_at": "2026-05-16",
   "categories": [
     { "id": "ai", "label": "IA y Asistentes", "icon": "spark" },
     { "id": "manufacturing", "label": "Manufactura digital", "icon": "factory" },
@@ -218,6 +218,138 @@
       "impact": "Cero tilt, cero FOMO, cero setups perdidos por horario. La estrategia ejecuta exactamente como la diseñaste — siempre.",
       "stack": ["MQL5", "MetaTrader 4 / 5", "Backtesting", "Auto-deteccion broker"],
       "mockup": "trading-chart"
+    },
+    {
+      "id": "redactor-actas",
+      "category": "ai",
+      "featured": true,
+      "title": "Redactor de actas con IA",
+      "tagline": "Escribe el acta mientras la reunion sucede.",
+      "problem": "Tomar acta a mano distrae, demora horas y siempre se olvida algo. Despues nadie revisa lo que se decidio.",
+      "solution": "Editor de actas con asistente IA que sugiere viñetas, organiza por temas, identifica decisiones y compromisos. Exporta PDF profesional con tu marca, firma digital opcional y envio automatico a los asistentes.",
+      "impact": "De 2 horas redactando a 10 minutos. Decisiones trazables. Compromisos con responsable y fecha.",
+      "stack": ["Claude AI", "React", "FastAPI", "jsPDF"],
+      "mockup": "acta-editor"
+    },
+    {
+      "id": "bootcamp-capacitacion",
+      "category": "productivity",
+      "featured": true,
+      "title": "Plataforma de capacitacion con examenes y diplomas",
+      "tagline": "Tus capacitaciones — con quiz final, diploma verificable y reportes de adopcion.",
+      "problem": "Capacitar al personal con PDFs sueltos y WhatsApp grupal. Nadie sabe quien termino el curso ni quien aprobo el examen.",
+      "solution": "Cursos en pasos colapsables, contenido importable desde PDF/PPTX (con IA), videos integrados, examen final con tiempo, diploma con QR verificable, panel de reporte global e inscritos. Notificacion por email al inscribirse.",
+      "impact": "Capacitaciones que la gente termina. Evidencia de aprobacion. Cero papel.",
+      "stack": ["React", "FastAPI", "Gemini AI", "PostgreSQL", "QR codes"],
+      "mockup": "bootcamp-hub"
+    },
+    {
+      "id": "inventario-wms",
+      "category": "data",
+      "featured": true,
+      "title": "Saldos de inventario en vivo por bodega",
+      "tagline": "Cuanto tienes, en que bodega y donde exactamente — en un click.",
+      "problem": "Saber el stock de un producto requiere correr un reporte SAP/SAGE, consultar al jefe de bodega o caminar fisicamente.",
+      "solution": "Tablero con saldos totales por producto + breakdown por bodega + ubicaciones exactas dentro de cada bodega. Exporta Excel con formato. Click en celda muestra ubicaciones detalladas. Funciona contra tu WMS o ERP.",
+      "impact": "Decisiones de despacho y compra basadas en datos reales. Cero llamadas a bodega.",
+      "stack": ["React", "FastAPI", "SQL Server", "openpyxl"],
+      "mockup": "saldos-grid"
+    },
+    {
+      "id": "planificacion-produccion",
+      "category": "manufacturing",
+      "featured": true,
+      "title": "Ordenes de surtido con explosion BOM",
+      "tagline": "Cuanta materia prima necesitas para producir X — calculado al instante.",
+      "problem": "Planear el surtido para una orden de produccion requiere consultar BOMs uno a uno, restar saldos disponibles y armar listado a mano. Toma medio dia.",
+      "solution": "Asistente de planeacion que recibe los productos terminados a fabricar, explota el BOM automaticamente, descuenta saldos disponibles y genera la orden de surtido lista para imprimir. Soporta multi-bodega, ubicaciones, reedicion de OS.",
+      "impact": "Planeacion en 5 minutos, no medio dia. Cero errores de calculo. Trazabilidad por consecutivo.",
+      "stack": ["React", "FastAPI", "SQL Server", "PostgreSQL"],
+      "mockup": "os-wizard"
+    },
+    {
+      "id": "alertas-stock",
+      "category": "manufacturing",
+      "featured": false,
+      "title": "Semaforo de cobertura de stock",
+      "tagline": "Cuantos dias te dura cada producto — rojo, amarillo o verde.",
+      "problem": "Importaciones que llegan tarde paralizan ventas. Sin cobertura visible, las decisiones de pedido se toman tarde.",
+      "solution": "Tablero con dias de cobertura por producto, combinando saldo actual + pedidos en transito + promedio diario de salida. Cuadrantes configurables (mediano y corto plazo). Override por producto. Semaforo automatico.",
+      "impact": "Detectas faltantes con semanas de anticipacion. Pedidos de importacion oportunos.",
+      "stack": ["React", "FastAPI", "SQL Server"],
+      "mockup": "stock-semaforo"
+    },
+    {
+      "id": "saas-multi-tenant",
+      "category": "web",
+      "featured": true,
+      "title": "Tu propio SaaS para vender a clientes",
+      "tagline": "Una app, multiples empresas — datos aislados, branding por cliente.",
+      "problem": "Tienes una app que funciona genial en tu empresa. Otros clientes te la piden — pero ¿como aislas sus datos? ¿como manejas su marca? ¿como cobras mensual?",
+      "solution": "Arquitectura multi-tenant lista: subdominio por cliente, base de datos aislada, branding por tenant.json (logo, colores, nombre), filtrado automatico de apps habilitadas, smoke test E2E, despliegue automatizado. Cliente nuevo en 30 minutos.",
+      "impact": "Dejas de ser empleado, te vuelves SaaS. Una app — varios clientes pagando.",
+      "stack": ["React", "FastAPI", "Cloudflare Tunnel", "Nginx", "PostgreSQL"],
+      "mockup": "saas-tenants"
+    },
+    {
+      "id": "comisiones-ventas",
+      "category": "data",
+      "featured": false,
+      "title": "Comisiones por crecimiento de ventas",
+      "tagline": "Vendedores que cobran lo que ganan — calculado en segundos.",
+      "problem": "Calcular comisiones mensuales por vendedor toma horas en Excel, con riesgo de errores y reclamos.",
+      "solution": "Calculadora que compara ventas del periodo vs año anterior, aplica reglas de crecimiento por escalas, valida descuentos otorgados y entrega el resumen por vendedor listo para nomina. Conectada al ERP.",
+      "impact": "Cero discusiones por comisiones. Vendedores motivados con datos transparentes.",
+      "stack": ["React", "FastAPI", "SQL Server"],
+      "mockup": "comisiones-tabla"
+    },
+    {
+      "id": "turno-operarios",
+      "category": "manufacturing",
+      "featured": false,
+      "title": "Programacion de turnos en planta",
+      "tagline": "Quincenas asignadas + tablet en planta + PDF exportable.",
+      "problem": "Programar turnos en Excel, imprimir y pegar en cartelera. Nadie sabe quien viene mañana ni quien esta en vacaciones.",
+      "solution": "Editor de quincenas con codigos por turno y novedades (vacaciones, incapacidad, libre). Vista publica para tablet en planta con SSE en tiempo real. Exporta PDF carta vertical con colores. Login no necesario para la vista publica.",
+      "impact": "Operarios consultan su turno desde la tablet. Cero papel en cartelera. Cambios reflejados al instante.",
+      "stack": ["React", "FastAPI", "PostgreSQL", "Server-Sent Events", "jsPDF"],
+      "mockup": "turno-tablet"
+    },
+    {
+      "id": "desempeno-operarios",
+      "category": "manufacturing",
+      "featured": false,
+      "title": "Ranking de desempeño operario",
+      "tagline": "Mide produccion, calidad y asistencia por operario — con reporte WhatsApp automatico.",
+      "problem": "Reconocer al operario destacado del mes es subjetivo, basado en quien cae bien al supervisor.",
+      "solution": "Indicador compuesto (unidades buenas, scrap, asistencia, paros) que ranquea operarios cada mes. Envio automatico programado por WhatsApp con podio + lista completa. Configurable por linea/centro.",
+      "impact": "Reconocimiento objetivo. Operarios motivados por datos. Supervisor con argumentos claros.",
+      "stack": ["React", "FastAPI", "PostgreSQL", "Evolution API (WhatsApp)"],
+      "mockup": "ranking-podio"
+    },
+    {
+      "id": "whatsapp-masivo",
+      "category": "automation",
+      "featured": false,
+      "title": "Envio masivo de WhatsApp con plantillas",
+      "tagline": "Manda 200 mensajes personalizados — sin abrir el celular.",
+      "problem": "Avisar a empleados, clientes o proveedores requiere copy-paste manual mensaje por mensaje. WhatsApp Business cuesta y es complejo.",
+      "solution": "Servidor propio Evolution API conectado a un WhatsApp. Editor de plantillas con variables, lista de destinatarios desde Excel, envios programados, reintentos automaticos, log de entregas. Saludo personalizado con el nombre.",
+      "impact": "Comunicacion masiva sin chat-by-chat. Mensajes que la gente sí lee. Cero costo por mensaje.",
+      "stack": ["React", "FastAPI", "Evolution API", "WhatsApp Web"],
+      "mockup": "wa-masivo"
+    },
+    {
+      "id": "dotacion-personal",
+      "category": "data",
+      "featured": false,
+      "title": "Dotacion del personal con kardex y firma digital",
+      "tagline": "Entregas con firma touch + control de stock + reporte por trabajador.",
+      "problem": "Entregar dotacion en papel, firmar en cuaderno, calcular faltantes a mano y nunca saber quien tiene que dotacion.",
+      "solution": "Kardex con stock por talla, registro de entregas con firma electronica del trabajador, calculo automatico de compra teorica y sugerida, indicadores de cumplimiento. Excel y PDF en un click.",
+      "impact": "Cero papel. Compras de dotacion basadas en consumo real. Auditoria con firma.",
+      "stack": ["React", "FastAPI", "Canvas signature", "PostgreSQL"],
+      "mockup": "dotacion-kardex"
     }
   ]
 }
